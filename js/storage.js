@@ -186,8 +186,13 @@ function joinChallenge(inviteCode, memberName, memberAvatar = '👤') {
 
     const currentUser = getCurrentUser();
 
-    // Check if already a member
-    if (challenge.members.some(m => m.id === currentUser.id)) {
+    // Check if already a member (check by both userId AND invite code)
+    // This allows same user to join if using a different browser/session
+    const alreadyMember = challenge.members.some(m =>
+        m.id === currentUser.id && challenge.id === getUserChallenges().find(c => c.id === challenge.id)?.id
+    );
+
+    if (alreadyMember) {
         return { success: false, error: '您已加入该挑战' };
     }
 

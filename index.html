@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="团队挑战打卡应用 - 通过群体责任制完成长期目标">
   <meta name="theme-color" content="#DC2626">
-  
+
   <title>挑战追踪器 - Team Challenge Tracker</title>
-  
+
   <!-- PWA Manifest -->
   <link rel="manifest" href="/manifest.json">
-  
+
   <!-- Icons -->
   <link rel="icon" type="image/png" sizes="192x192" href="/images/icons/icon-192x192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="/images/icons/icon-512x512.png">
   <link rel="apple-touch-icon" href="/images/icons/icon-192x192.png">
-  
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600;700&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600;700&family=Jost:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
   <!-- Styles -->
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/components.css">
 </head>
+
 <body>
   <!-- App Container -->
   <div id="app">
@@ -37,10 +41,18 @@
         </div>
         <div class="nav-actions">
           <button class="btn-icon" id="btn-home" aria-label="首页">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
           </button>
           <button class="btn-icon" id="btn-profile" aria-label="个人资料">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
           </button>
         </div>
       </div>
@@ -71,7 +83,10 @@
 
   <!-- Scripts -->
   <script src="/js/utils.js"></script>
+  <script src="/js/auth.js"></script>
   <script src="/js/storage.js"></script>
+  <script src="/js/views/login.js"></script>
+  <script src="/js/views/register.js"></script>
   <script src="/js/views/home.js"></script>
   <script src="/js/views/create-challenge.js"></script>
   <script src="/js/views/challenge-detail.js"></script>
@@ -79,7 +94,7 @@
   <script src="/js/views/statistics.js"></script>
   <script src="/js/views/profile.js"></script>
   <script src="/js/app.js"></script>
-  
+
   <!-- Register Service Worker -->
   <script>
     if ('serviceWorker' in navigator) {
@@ -91,4 +106,5 @@
     }
   </script>
 </body>
+
 </html>
